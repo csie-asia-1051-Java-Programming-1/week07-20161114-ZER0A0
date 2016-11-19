@@ -12,17 +12,23 @@ public class ex01 {
 		
 		int n = scn.nextInt();
 		int data[] = new int[n];
-		float t = 0;
 		
 		for(int x = 0 ; x < n ; x ++){
-			data[x] = scn.nextInt();
-			t = t + data[x];}
-		t = t / n;
-		System.out.print(var())}
+			data[x] = scn.nextInt();}
+		System.out.print(var(n,data));
+	}
 	
-	public static int var(int a , int data[]){
-		float t2 = 0;
-		for(int xx = 0 ; xx < a ; xx ++){
-			t2 = t2 + (data[xx] - t)*(data[xx] - t);}}}
-
-
+	public static double var(int m , int data[]){
+		
+		double t = 0 , t2 = 0;
+		
+		for(int y = 0 ; y < m ; y ++){
+			t = t + data[y];}
+		t = t / m;
+		for(int z = 0 ; z < m ; z ++){
+			t2 = t2 + ((data[z] - t) * (data[z] - t));}
+		t2 = t2 / m;
+		return t2;
+	}
+	
+}
